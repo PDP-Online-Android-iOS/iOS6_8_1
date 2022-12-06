@@ -6,6 +6,8 @@ target 'Task 1' do
   use_frameworks!
 
   # Pods for Task 1
-  pod 'Firebase/Auth' 
+
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
 end

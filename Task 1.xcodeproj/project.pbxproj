@@ -16,10 +16,14 @@
 		649C9299293F6089009066CE /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649C9298293F6089009066CE /* SignInScreen.swift */; };
 		649C929B293F609C009066CE /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649C929A293F609C009066CE /* SignUpScreen.swift */; };
 		649C929D293F60E1009066CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649C929C293F60E1009066CE /* GoogleService-Info.plist */; };
-		649C929F293F616A009066CE /* AddPostScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649C929E293F616A009066CE /* AddPostScreen.swift */; };
+		649C929F293F616A009066CE /* AddContactScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649C929E293F616A009066CE /* AddContactScreen.swift */; };
 		649C92A1293F61FE009066CE /* StarterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649C92A0293F61FE009066CE /* StarterScreen.swift */; };
 		649C92A5293F6299009066CE /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649C92A4293F6299009066CE /* SessionStore.swift */; };
 		649C92A8293F65BC009066CE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649C92A7293F65BC009066CE /* User.swift */; };
+		64FD9E81293F78FA000F29B5 /* RealtimeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FD9E80293F78FA000F29B5 /* RealtimeStore.swift */; };
+		64FD9E83293F7992000F29B5 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FD9E82293F7992000F29B5 /* Contact.swift */; };
+		64FD9E86293F824D000F29B5 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FD9E85293F824D000F29B5 /* ContactCell.swift */; };
+		64FD9E89293F89B0000F29B5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FD9E88293F89B0000F29B5 /* Extensions.swift */; };
 		9C1E4DFA79D39C4221A884CA /* Pods_Task_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA64E5A3BB43A79F02A72698 /* Pods_Task_1.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,10 +40,14 @@
 		649C9298293F6089009066CE /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
 		649C929A293F609C009066CE /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		649C929C293F60E1009066CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		649C929E293F616A009066CE /* AddPostScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostScreen.swift; sourceTree = "<group>"; };
+		649C929E293F616A009066CE /* AddContactScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactScreen.swift; sourceTree = "<group>"; };
 		649C92A0293F61FE009066CE /* StarterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterScreen.swift; sourceTree = "<group>"; };
 		649C92A4293F6299009066CE /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		649C92A7293F65BC009066CE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		64FD9E80293F78FA000F29B5 /* RealtimeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeStore.swift; sourceTree = "<group>"; };
+		64FD9E82293F7992000F29B5 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		64FD9E85293F824D000F29B5 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		64FD9E88293F89B0000F29B5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CA64E5A3BB43A79F02A72698 /* Pods_Task_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,6 +92,8 @@
 		649C9281293F6067009066CE /* Task 1 */ = {
 			isa = PBXGroup;
 			children = (
+				64FD9E87293F89A0000F29B5 /* utils */,
+				64FD9E84293F8241000F29B5 /* cell */,
 				649C92A6293F65B5009066CE /* model */,
 				649C92A3293F6263009066CE /* networking */,
 				649C9295293F6076009066CE /* screens */,
@@ -111,7 +121,7 @@
 				649C9296293F6081009066CE /* HomeScreen.swift */,
 				649C9298293F6089009066CE /* SignInScreen.swift */,
 				649C929A293F609C009066CE /* SignUpScreen.swift */,
-				649C929E293F616A009066CE /* AddPostScreen.swift */,
+				649C929E293F616A009066CE /* AddContactScreen.swift */,
 				649C92A0293F61FE009066CE /* StarterScreen.swift */,
 			);
 			path = screens;
@@ -121,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				649C92A4293F6299009066CE /* SessionStore.swift */,
+				64FD9E80293F78FA000F29B5 /* RealtimeStore.swift */,
 			);
 			path = networking;
 			sourceTree = "<group>";
@@ -129,8 +140,25 @@
 			isa = PBXGroup;
 			children = (
 				649C92A7293F65BC009066CE /* User.swift */,
+				64FD9E82293F7992000F29B5 /* Contact.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		64FD9E84293F8241000F29B5 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				64FD9E85293F824D000F29B5 /* ContactCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		64FD9E87293F89A0000F29B5 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				64FD9E88293F89B0000F29B5 /* Extensions.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 		CFF38FDBA905A53ADCA61B31 /* Pods */ = {
@@ -257,16 +285,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64FD9E83293F7992000F29B5 /* Contact.swift in Sources */,
 				649C928C293F6068009066CE /* Persistence.swift in Sources */,
 				649C9297293F6081009066CE /* HomeScreen.swift in Sources */,
+				64FD9E86293F824D000F29B5 /* ContactCell.swift in Sources */,
 				649C929B293F609C009066CE /* SignUpScreen.swift in Sources */,
 				649C92A1293F61FE009066CE /* StarterScreen.swift in Sources */,
-				649C929F293F616A009066CE /* AddPostScreen.swift in Sources */,
+				64FD9E81293F78FA000F29B5 /* RealtimeStore.swift in Sources */,
+				649C929F293F616A009066CE /* AddContactScreen.swift in Sources */,
 				649C92A5293F6299009066CE /* SessionStore.swift in Sources */,
 				649C928F293F6068009066CE /* Task_1.xcdatamodeld in Sources */,
 				649C9283293F6067009066CE /* Task_1App.swift in Sources */,
 				649C92A8293F65BC009066CE /* User.swift in Sources */,
 				649C9299293F6089009066CE /* SignInScreen.swift in Sources */,
+				64FD9E89293F89B0000F29B5 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
