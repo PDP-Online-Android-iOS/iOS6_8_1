@@ -57,7 +57,7 @@ struct SignInScreen: View {
                         doSignIn()
                     }, label: {
                         Spacer()
-                        Text("Sign Up")
+                        Text("Sign In")
                             .foregroundColor(.white)
                         Spacer()
                     })
@@ -73,7 +73,7 @@ struct SignInScreen: View {
                             Button {
                                 isSheet = true
                             } label: {
-                                Text("Sign In")
+                                Text("Sign Up")
                                     .foregroundColor(.red)
                             }.sheet(isPresented: $isSheet, content: {
                                 SignUpScreen()

@@ -11,16 +11,21 @@ struct AddPostScreen: View {
     @Environment(\.presentationMode) var presentation
     
     @ObservedObject var database = RealtimeStore()
+    @ObservedObject var storage = StorageStore()
     
+    @State var defImage = UIImage(imageLiteralResourceName: "img_picker")
     @State var firstname = ""
     @State var lastname = ""
     @State var number = ""
     
+    @State var pickedImage: UIImage? = nil
+    @State var showImagePicker: Bool = false
+    
     @State var isLoading = false
     
-    func addNewContact() {
+    func addNewContact(photo: String) {
         isLoading = true
-        let contact = Contact(name: "\(firstname) \(lastname)", number: number)
+        let contact = Contact(name: "\(firstname) \(lastname)", number: number, image: photo)
         database.storeContact(contact: contact, completion: { status in
             isLoading = false
             if status {
@@ -29,10 +34,33 @@ struct AddPostScreen: View {
         })
     }
     
+    func uploadImage() {
+        isLoading = true
+        storage.uploadImage(pickedImage ?? defImage, completion: { url in
+            isLoading = false
+            let urlString = url?.absoluteString
+            print(urlString!)
+            addNewContact(photo: urlString! )
+        })
+    }
+    
     var body: some View {
         NavigationStack {
             ZStack {
                 VStack {
+                    
+                    Image(uiImage: pickedImage ?? defImage)
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .scaledToFit()
+                        .onTapGesture {
+                            self.showImagePicker = true
+                        }.sheet(isPresented: $showImagePicker, onDismiss: {
+                            self.showImagePicker = false
+                        }, content: {
+                            ImagePicker(image: self.$pickedImage, isShown: self.$showImagePicker)
+                        })
+                    
                     TextField("Firstname", text: $firstname)
                         .frame(height: 50)
                         .padding(.leading, 10)
@@ -52,7 +80,8 @@ struct AddPostScreen: View {
                         .cornerRadius(8)
                     
                     Button {
-                        addNewContact()
+//                        addNewContact()
+                        uploadImage()
                     } label: {
                         HStack {
                             Spacer()

@@ -9,5 +9,8 @@ target 'Task 1' do
 
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+
+  pod 'SDWebImageSwiftUI'
 
 end

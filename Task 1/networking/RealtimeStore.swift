@@ -16,7 +16,7 @@ class RealtimeStore: ObservableObject {
     
     func storeContact(contact: Contact, completion: @escaping (_ success: Bool) -> ()) {
         var success = true
-        let toBeSaved = ["name": contact.name!, "number": contact.number!]
+        let toBeSaved = ["name": contact.name!, "number": contact.number!, "image": contact.image!]
         
         ref.childByAutoId().setValue(toBeSaved) { (error, response) -> Void in
             if error != nil {
@@ -34,7 +34,8 @@ class RealtimeStore: ObservableObject {
                     let value = snapshot.value as? [String: AnyObject]
                     let name = value!["name"] as? String
                     let number = value!["number"] as? String
-                    self.contacts.append(Contact(name: name, number: number))
+                    let image = value!["image"] as? String
+                    self.contacts.append(Contact(name: name, number: number, image: image))
                 }
             }
             completion()

@@ -10,4 +10,5 @@ import Foundation
 struct Contact: Hashable {
     var name: String?
     var number: String?
+    var image: String?
 }

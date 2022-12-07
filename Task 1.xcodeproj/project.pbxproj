@@ -24,6 +24,8 @@
 		64FD9E83293F7992000F29B5 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FD9E82293F7992000F29B5 /* Contact.swift */; };
 		64FD9E86293F824D000F29B5 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FD9E85293F824D000F29B5 /* ContactCell.swift */; };
 		64FD9E89293F89B0000F29B5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FD9E88293F89B0000F29B5 /* Extensions.swift */; };
+		64FD9E8C294093E9000F29B5 /* StorageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FD9E8B294093E9000F29B5 /* StorageStore.swift */; };
+		64FD9E8E294098A0000F29B5 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FD9E8D294098A0000F29B5 /* ImagePicker.swift */; };
 		9C1E4DFA79D39C4221A884CA /* Pods_Task_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA64E5A3BB43A79F02A72698 /* Pods_Task_1.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,9 @@
 		64FD9E82293F7992000F29B5 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		64FD9E85293F824D000F29B5 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		64FD9E88293F89B0000F29B5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		64FD9E8A2940937A000F29B5 /* Task-1-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Task-1-Info.plist"; sourceTree = SOURCE_ROOT; };
+		64FD9E8B294093E9000F29B5 /* StorageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StorageStore.swift; path = ../../../../../../Desktop/StorageStore.swift; sourceTree = "<group>"; };
+		64FD9E8D294098A0000F29B5 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CA64E5A3BB43A79F02A72698 /* Pods_Task_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,6 +97,7 @@
 		649C9281293F6067009066CE /* Task 1 */ = {
 			isa = PBXGroup;
 			children = (
+				64FD9E8A2940937A000F29B5 /* Task-1-Info.plist */,
 				64FD9E87293F89A0000F29B5 /* utils */,
 				64FD9E84293F8241000F29B5 /* cell */,
 				649C92A6293F65B5009066CE /* model */,
@@ -132,6 +138,7 @@
 			children = (
 				649C92A4293F6299009066CE /* SessionStore.swift */,
 				64FD9E80293F78FA000F29B5 /* RealtimeStore.swift */,
+				64FD9E8B294093E9000F29B5 /* StorageStore.swift */,
 			);
 			path = networking;
 			sourceTree = "<group>";
@@ -157,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				64FD9E88293F89B0000F29B5 /* Extensions.swift */,
+				64FD9E8D294098A0000F29B5 /* ImagePicker.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -296,7 +304,9 @@
 				649C92A5293F6299009066CE /* SessionStore.swift in Sources */,
 				649C928F293F6068009066CE /* Task_1.xcdatamodeld in Sources */,
 				649C9283293F6067009066CE /* Task_1App.swift in Sources */,
+				64FD9E8C294093E9000F29B5 /* StorageStore.swift in Sources */,
 				649C92A8293F65BC009066CE /* User.swift in Sources */,
+				64FD9E8E294098A0000F29B5 /* ImagePicker.swift in Sources */,
 				649C9299293F6089009066CE /* SignInScreen.swift in Sources */,
 				64FD9E89293F89B0000F29B5 /* Extensions.swift in Sources */,
 			);
@@ -431,6 +441,9 @@
 				DEVELOPMENT_TEAM = 6K7DDF9TZ3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Task-1-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "camera description";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "photos description";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -461,6 +474,9 @@
 				DEVELOPMENT_TEAM = 6K7DDF9TZ3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Task-1-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "camera description";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "photos description";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
